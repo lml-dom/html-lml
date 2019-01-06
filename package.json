@@ -1,0 +1,50 @@
+{
+  "name": "html-lml",
+  "version": "0.8.0",
+  "description": "HTML parser extension for the LML package",
+  "keywords": [
+    "html",
+    "lml",
+    "alternative",
+    "ast",
+    "compiler",
+    "translate",
+    "simple",
+    "hierarchy",
+    "dom",
+    "xml",
+    "parser"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "build": "npm run clean && npm run lint && npm run test && npm run compile",
+    "compile": "tsc",
+    "lint": "tslint --project tsconfig.json",
+    "test": "rm -rf .nyc_output coverage ; npm run lint && nyc --reporter=lcov --reporter=text --exclude=\"spec/**/*.ts\" --exclude=\"*.spec.ts\" --extension .ts jasmine-ts"
+  },
+  "author": "Greg Varsanyi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lml-dom/html-lml.git"
+  },
+  "bugs": "https://github.com/lml-dom/html-lml/issues",
+  "homepage": "https://lml-dom.org/",
+  "dependencies": {
+    "htmlparser2": "3.10.0",
+    "lml": "file:../lml-0.8.0.tgz"
+  },
+  "devDependencies": {
+    "@types/htmlparser2": "3.7.31",
+    "@types/jasmine": "3.3.5",
+    "@types/node": "10.12.18",
+    "jasmine": "3.3.1",
+    "jasmine-ts": "0.3.0",
+    "nyc": "13.1.0",
+    "ts-node": "7.0.1",
+    "tslint": "5.12.0",
+    "typedoc": "0.14.0",
+    "typescript": "3.2.2"
+  }
+}
