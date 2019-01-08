@@ -1,6 +1,6 @@
 {
   "name": "html-lml",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "HTML parser extension for the LML package",
   "keywords": [
     "html",
@@ -33,7 +33,7 @@
   "homepage": "https://lml-dom.org/",
   "dependencies": {
     "htmlparser2": "3.10.0",
-    "lml": "file:../lml-0.8.0.tgz"
+    "lml": "0.8.1"
   },
   "devDependencies": {
     "@types/htmlparser2": "3.7.31",
