@@ -32,8 +32,6 @@ export class HTMLParser extends StringParser {
     }, {recognizeCDATA: true, recognizeSelfClosing: true});
     this._parser.parseComplete(this.source.content);
     this._parser = null;
-
-    this.postProcess();
   }
 
   /**
